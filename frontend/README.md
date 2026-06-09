@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Security Gate System - Hotel & Company Equipment Tracking
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A complete MERN stack application for tracking equipment check-ins and check-outs for both hotel guests and company staff.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Running the Application](#running-the-application)
+- [User Roles & Permissions](#user-roles--permissions)
+- [System Workflow](#system-workflow)
+- [API Endpoints](#api-endpoints)
+- [Export & Reporting](#export--reporting)
+- [Screenshots](#screenshots)
+- [Troubleshooting](#troubleshooting)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The **Security Gate System** is a comprehensive solution for managing equipment movement at hotel security gates. It handles two distinct scenarios:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. ** Hotel Guests** - Register personal equipment when guests arrive and verify when they depart
+2. ** Company Staff** - Track company equipment taken outside and ensure timely returns
 
-### `npm test`
+The system ensures that no unregistered equipment leaves the premises and provides complete audit trails for all transactions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+### Core Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**User Authentication** - Secure login for security guards, managers, and admins
+**Role-Based Access Control** - Different permissions for different user types
+**Guest Equipment Registration** - Register guest personal equipment upon arrival
+**Guest Departure Verification** - Verify equipment before allowing exit
+**Company Equipment Check-Out** - Register staff taking company equipment outside
+**Company Equipment Check-In** - Track returns and condition of equipment
+**Overdue Tracking** - Automatic detection and reporting of overdue equipment
+**Real-time Dashboard** - Live statistics and activity monitoring
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Advanced Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Export to Excel/CSV** - Generate comprehensive reports
+**Search & Filter** - Find transactions by equipment, person, room, or date
+**Transaction History** - Complete audit trail of all activities
+**Security Guard Tracking** - Every transaction records who processed it
+**Date Range Filtering** - Filter reports by custom date ranges
+**Equipment Condition Tracking** - Record condition when checking in/out
+**Manager Reporting** - Report overdue equipment to management
 
-### `npm run eject`
+## Technology Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**React 18** - UI Framework
+**React Router DOM** - Navigation
+**Axios** - API calls
+**XLSX / FileSaver** - Excel export functionality
+**CSS-in-JS** - Styling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Node.js** - Runtime environment
+**Express.js** - Web framework
+**MongoDB** - Database
+**Mongoose** - ODM
+**JWT** - Authentication
+**bcryptjs** - Password hashing
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Node.js (v14 or higher)
+MongoDB (v4.4 or higher)
+npm or yarn package manager
 
-### Code Splitting
+### Step 1: Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/nebajooo/security-gate-system.git
+cd security-gate-system
+```
