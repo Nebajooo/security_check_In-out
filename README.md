@@ -14,10 +14,8 @@ A complete MERN stack application for tracking equipment check-ins and check-out
 - [System Workflow](#system-workflow)
 - [API Endpoints](#api-endpoints)
 - [Export & Reporting](#export--reporting)
-- [Screenshots](#screenshots)
 - [Troubleshooting](#troubleshooting)
 - [Future Enhancements](#future-enhancements)A
-- [License](#license)
 
 ## Overview
 
