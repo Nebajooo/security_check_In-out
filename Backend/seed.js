@@ -8,9 +8,6 @@ const seedDatabase = async () => {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connected to MongoDB");
 
-    // Clear existing guards (optional - be careful in production!)
-    // await SecurityGuard.deleteMany({});
-
     // Check if admin exists
     let adminExists = await SecurityGuard.findOne({ username: "admin" });
     if (!adminExists) {

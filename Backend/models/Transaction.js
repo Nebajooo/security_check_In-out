@@ -8,14 +8,12 @@ const transactionSchema = new mongoose.Schema(
       required: true,
     },
 
-    // Transaction Type
     transactionType: {
       type: String,
       enum: ["guest_personal", "company_equipment"],
       required: true,
     },
 
-    // Equipment Info
     equipmentName: {
       type: String,
       required: true,
@@ -82,7 +80,6 @@ const transactionSchema = new mongoose.Schema(
       type: Date,
     },
 
-    // Movement Tracking
     direction: {
       type: String,
       enum: ["IN", "OUT"], // IN = entering hotel, OUT = leaving hotel
@@ -103,7 +100,6 @@ const transactionSchema = new mongoose.Schema(
       default: false,
     },
 
-    // Security Info
     securityName: {
       type: String,
       required: true,
@@ -113,7 +109,6 @@ const transactionSchema = new mongoose.Schema(
       ref: "User",
     },
 
-    // Status & Notes
     status: {
       type: String,
       enum: ["active", "returned", "reported", "rejected"],
@@ -129,7 +124,6 @@ const transactionSchema = new mongoose.Schema(
       trim: true,
     },
 
-    // For reports
     reportedToManager: {
       type: Boolean,
       default: false,

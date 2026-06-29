@@ -32,7 +32,7 @@ function LoginScreen() {
     } catch (error) {
       console.error("Error loading users:", error);
       console.error("Error details:", error.response?.data);
-      // Show error message to user
+
       alert("Failed to load users. Please check if backend is running.");
     } finally {
       setLoading(false);

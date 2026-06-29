@@ -67,7 +67,7 @@ function ExportButton({ data, filename, buttonText, buttonStyle, icon }) {
     // Create worksheet
     const worksheet = XLSX.utils.json_to_sheet(exportData);
 
-    // Auto-size columns (simple version)
+    // Auto-size columns
     const maxWidth = 20;
     worksheet["!cols"] = Object.keys(exportData[0] || {}).map(() => ({
       wch: maxWidth,

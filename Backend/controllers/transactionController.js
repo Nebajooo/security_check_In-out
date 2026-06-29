@@ -10,8 +10,7 @@ const generateTransactionNumber = async () => {
   return `${dateStr}-${sequence}`;
 };
 
-// ============ GUEST PERSONAL EQUIPMENT ============
-// Guest brings equipment INTO hotel (REGISTER at entry)
+// === GUEST PERSONAL EQUIPMENT, (REGISTER at entry)
 exports.guestCheckIn = async (req, res) => {
   try {
     const {
@@ -126,7 +125,7 @@ exports.searchGuestEquipment = async (req, res) => {
   }
 };
 
-// ============ COMPANY EQUIPMENT ============
+// ==== COMPANY EQUIPMENT ====
 // Staff takes company equipment OUT of hotel (MUST register first)
 exports.companyEquipmentOut = async (req, res) => {
   try {
@@ -271,7 +270,7 @@ exports.reportToManager = async (req, res) => {
   }
 };
 
-// ============ DASHBOARD STATISTICS ============
+// ==== DASHBOARD STATISTICS ====
 exports.getStatistics = async (req, res) => {
   try {
     const today = new Date();

@@ -12,7 +12,7 @@ exports.login = async (req, res) => {
   try {
     const { username, password } = req.body;
 
-    console.log("\n========== LOGIN ATTEMPT ==========");
+    console.log("\n====== LOGIN ATTEMPT ======");
     console.log("Username:", username);
 
     if (!username || !password) {
